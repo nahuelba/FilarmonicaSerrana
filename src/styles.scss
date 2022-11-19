@@ -10,12 +10,25 @@ $primary:rgb(162, 2, 2);
     text-align: center;
 }
 
-@media only screen and (max-width: 1200px){
+//Containers
+@media only screen and (max-width: 700px) and  (min-width: 700px){
     .container {
-        padding-left: 45px;
-        padding-right: 45px;
+        padding: 0;
+
     }
 }
+@media only screen and (min-width: 700px) and (max-width: 1200px){
+    .container {
+        padding: 0 40px;
+
+    }
+}
+@media only screen and (min-width: 1200px){
+    .container {
+        padding: 0 60px;
+    }
+}
+
 
 h1{
     color: $primary;
