@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  nav:string[] = [
+    "Inicio",
+    "Biografía",
+    "Blog",
+    "Conciertos",
+    "Discografía",
+    "Contacto"
+  ]
+
   constructor() { }
 
   ngOnInit(): void {

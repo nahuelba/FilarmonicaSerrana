@@ -1,10 +1,31 @@
 .header{
     // background: rgba(0,0,0,.4);
-    background-color: black;
+    background-color: white;
     max-height: 90px;
+    border-bottom: 1px solid;
 
-}
+    .content{
+        display: flex;
+        justify-content: space-around;
+        margin: 0 60px;
+        img{
+            height: 95px;
+        }
 
-.logo{
-    background-image: url("/assets/img/logo-filarmonica.jpg");
-}
+        ul.nav{
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+
+            li{
+                text-transform: uppercase;
+                &:hover{
+                    color: rgb(162, 2, 2);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+} 
+
