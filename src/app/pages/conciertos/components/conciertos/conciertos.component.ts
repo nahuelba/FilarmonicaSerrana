@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { info } from 'src/app/core/interfaces/card.interface';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-conciertos',
+  templateUrl: './conciertos.component.html',
+  styleUrls: ['./conciertos.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class ConciertosComponent implements OnInit {
 
   eventos:info[] = [
     {

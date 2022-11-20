@@ -9,6 +9,7 @@
 
     .info-title{
         margin-right: auto;
+        padding-left: 20px;
 
     }
     
@@ -20,5 +21,31 @@
         border-left: 1px solid #eee;
         padding-left: 20px;
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .card{
+
+        flex-direction: column;
+         align-items: center;
+         max-width: 350px;
+
+        img{
+            width: 200px;
+        }
+
+        .info-title{
+            margin-right: initial;
+            padding: 0px 20px;
+    
+        }
+
+        .info{
+            flex-basis: 200px;
+            border-top: 1px solid #eee;
+            border-left: none;
+        }
+
     }
 }

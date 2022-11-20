@@ -17,23 +17,25 @@ export class HeaderComponent implements OnInit {
       path:'/nosotros',
       name:'Nosotros'
     },
-    {
-      path:'/blog',
-      name:'Blog'
-    },
+    // {
+    //   path:'/blog',
+    //   name:'Blog'
+    // },
     {
       path:'/conciertos',
       name:'Conciertos'
     },
     {
-      path:'/discografia',
-      name:'Discografía'
+      path:'/galeria',
+      name:'Galería'
     },
     {
       path:'/contacto',
       name:'Contacto'
     }
   ]
+
+  menuMobile:boolean = false;
 
   constructor() { }
 

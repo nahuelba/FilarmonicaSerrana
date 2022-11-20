@@ -1,0 +1,8 @@
+<div class="hero"></div>
+
+<div class="container">
+    <h1>Conciertos y Eventos </h1>
+    <div class="center" >
+        <app-event-card *ngFor="let evento of eventos" [info]="evento"></app-event-card>
+    </div>
+</div>

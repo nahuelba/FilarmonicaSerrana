@@ -1,5 +1,5 @@
 <div class="card">
-    <img [src]="info.image" alt="">
+    <img *ngIf="info.image" [src]="info.image" alt="">
     <div class="info-title">
 
         <h2>{{info.title}}</h2>

@@ -1,12 +1,44 @@
 <div class="header">
     <div class="content">
-        <img src="/assets/img/logo-filarmonica-black.png" />
+
+
+
+        <img src="/assets/img/logo-filarmonica.png" />
 
         <ul class="nav">
+        
             <li *ngFor="let item of nav" 
             [routerLink]="item.path" 
             routerLinkActive="active" 
+            [routerLinkActiveOptions]="{ exact: true }"
             >{{item.name}}</li>
         </ul>
+
+        <button class="hamburger hamburger--chop" [ngClass]="{'active': menuMobile}" (click)="menuMobile=!menuMobile" type="button">
+            <div class="inner">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </button>
+
+        <div *ngIf="menuMobile" class="menu-list">
+            <button class="hamburger hamburger--chop" style="margin-left:60%" [ngClass]="{'active': menuMobile}" (click)="menuMobile=!menuMobile" type="button">
+                <div class="inner">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </button>
+            <ul>
+        
+                <li *ngFor="let item of nav" 
+                [routerLink]="item.path" 
+                routerLinkActive="active" 
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="menuMobile=false;"
+                >{{item.name}}</li>
+            </ul>
+        </div>
     </div>
 </div>

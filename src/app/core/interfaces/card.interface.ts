@@ -1,5 +1,5 @@
 export interface info{
-    image: string;
+    image?: string;
     title: string;
     description: string;
     date: Date;

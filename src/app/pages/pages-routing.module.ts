@@ -5,6 +5,18 @@ const routes: Routes = [
   {
     path:'',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path:'conciertos',
+      loadChildren: () => import('./conciertos/conciertos.module').then(m => m.ConciertosModule)
+  },
+  {
+    path:'nosotros',
+      loadChildren: () => import('./nosotros/nosotros.module').then(m => m.NosotrosModule)
+  },
+  {
+    path:'contacto',
+      loadChildren: () => import('./contacto/contacto.module').then(m => m.ContactoModule)
   }
 ];
 

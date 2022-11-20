@@ -7,14 +7,15 @@
     <h1>Nosotros</h1>
     <p>Aca va una pequeña descripción del proyecto.</p>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique reprehenderit fugiat veritatis culpa, aut ea ipsa dolorem cumque vitae explicabo velit, sequi repudiandae laborum fuga magnam exercitationem! Ad, harum eius. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde fugiat odit non, cumque recusandae, dicta harum impedit sunt similique ratione eaque reiciendis enim provident maxime facere, minima consequuntur quibusdam illo? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum doloremque debitis soluta nobis aut voluptatum, adipisci architecto animi, velit laboriosam non! Repellat incidunt veniam minima quis nihil obcaecati ab facilis?</p>
-    <button routerLink="/biografia">Conocer más</button>
+    <button routerLink="/nosotros">Conocer más</button>
 
     <div class="divider"></div>
 
     <h1>Conciertos y Eventos</h1>
-    <div *ngFor="let evento of eventos">
-        <app-event-card [info]="evento"></app-event-card>
+    <div class="center" >
+        <app-event-card *ngFor="let evento of eventos" [info]="evento"></app-event-card>
     </div>
 
-    <button routerLink="/conciertos">Ver todos los eventos</button>
+    <button routerLink="/conciertos" style="margin-bottom: 50px;">Ver todos los eventos</button>    
+  
 </div>
