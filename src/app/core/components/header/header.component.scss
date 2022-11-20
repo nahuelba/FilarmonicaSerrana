@@ -1,3 +1,4 @@
+@import '/src/assets/colors';
 .header{
     // background: rgba(0,0,0,.4);
     background-color: white;
@@ -20,12 +21,22 @@
 
             li{
                 text-transform: uppercase;
+                -moz-transition: all .3s ease-in;
+                -o-transition: all .3s ease-in;
+                -webkit-transition: all .3s ease-in;
+                transition: all .3s ease-in;
+                font-size: 0.9em;
+                letter-spacing: 1.4px;
                 &:hover{
-                    color: rgb(162, 2, 2);
+                    color: $primary;
                     cursor: pointer;
                 }
+               
             }
         }
     }
 } 
 
+.active{
+    color: $primary;
+}
