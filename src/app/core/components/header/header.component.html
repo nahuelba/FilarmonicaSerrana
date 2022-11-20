@@ -1,9 +1,9 @@
-<div class="header">
+<div class="header" [ngClass]="{'navFixed': navFixed}">
     <div class="content">
 
 
 
-        <img src="/assets/img/logo-filarmonica.png" />
+        <img [ngStyle]="{'visibility': ( navFixed ? 'hidden' : 'visible')}" src="/assets/img/logo-filarmonica.png" />
 
         <ul class="nav">
         

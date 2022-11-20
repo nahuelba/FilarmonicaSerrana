@@ -3,6 +3,9 @@
 @import "~delicious-hamburgers/scss/base";
 @import "~delicious-hamburgers/scss/animations/chop";
 
+
+
+
 .header{
     // background: rgba(0,0,0,.4);
     background-color: white;
@@ -102,4 +105,24 @@
     }
 
 
+    .navFixed{
+        background-color: black;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1001;
+        color: white;
+        height: 50px;
+        .content{
+            height: 55px;
+            margin-right: -160px;
+
+        }
+
+        .active{
+            color: white;
+        }
+    }
+  
 }

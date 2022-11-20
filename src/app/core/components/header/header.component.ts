@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { link } from '../../interfaces/header.interface';
 
 @Component({
@@ -37,9 +37,21 @@ export class HeaderComponent implements OnInit {
 
   menuMobile:boolean = false;
 
+  navFixed: boolean = false;
+  scrollOffset: number = 90;
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  @HostListener('window:scroll')
+onWindowScroll() {
+  this.navFixed = (window.pageYOffset 
+    || document.documentElement.scrollTop 
+    || document.body.scrollTop || 0
+  ) > this.scrollOffset;
+}
 
 }
