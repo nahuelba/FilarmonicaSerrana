@@ -17,6 +17,11 @@ const routes: Routes = [
   {
     path:'contacto',
       loadChildren: () => import('./contacto/contacto.module').then(m => m.ContactoModule)
+  },
+  {
+    path:'galeria',
+    loadChildren: () => import('./galeria/galeria.module').then(m => m.GaleriaModule)
+
   }
 ];
 

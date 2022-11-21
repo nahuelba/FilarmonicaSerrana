@@ -47,11 +47,11 @@ export class HeaderComponent implements OnInit {
   }
 
   @HostListener('window:scroll')
-onWindowScroll() {
-  this.navFixed = (window.pageYOffset 
-    || document.documentElement.scrollTop 
-    || document.body.scrollTop || 0
-  ) > this.scrollOffset;
-}
+  onWindowScroll() {
+    this.navFixed = (window.pageYOffset 
+      || document.documentElement.scrollTop 
+      || document.body.scrollTop || 0
+    ) > this.scrollOffset;
+  }
 
 }
