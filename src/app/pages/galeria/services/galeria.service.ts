@@ -24,7 +24,8 @@ export class GaleriaService {
       let observables: any[] = [];
       
       ListResult.items.forEach((foto:StorageReference) => {
-        observables.push(from(getDownloadURL(ref(this.storage, foto.fullPath))).pipe(map( (url:string) => {
+        observables.push(from(getDownloadURL(ref(this.storage, foto.fullPath))).pipe(
+          map((url:string) => {
           return {
             image:url,
             name: foto.name.slice(0, -4)
@@ -36,6 +37,21 @@ export class GaleriaService {
       return combineLatest(observables);
     }))
   // return getDownloadURL(ref(this.storage, 'Fotos/Embalse.jpg'))
-
   }
+
+  getAlbumImages(name: string){
+    return from(listAll(ref(this.storage, 'Fotos/' + name))).pipe(concatMap((ListResult:ListResult) => {
+      let observables: any[] = [];
+      
+      ListResult.items.forEach((foto:StorageReference) => {
+        observables.push(from(getDownloadURL(ref(this.storage, foto.fullPath))).pipe(map((url:string) => url)))
+      })
+
+      console.log(observables);
+      return combineLatest(observables);
+    }))
+  }
+
 }
+
+ 
