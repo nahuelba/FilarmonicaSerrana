@@ -1,0 +1,40 @@
+.hero{
+    background-image:url("/assets/img/galeria.jpg");
+}
+
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    div{
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 400px;
+        width: 400px;
+        flex: 40%;
+        margin-bottom: 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+
+        &:hover{
+            -webkit-filter: brightness(30%);
+            -moz-filter: brightness(30%);
+            -o-filter: brightness(30%);
+            -ms-filter: brightness(30%);
+            filter: brightness(30%);
+
+        }
+
+       
+    }
+}
+

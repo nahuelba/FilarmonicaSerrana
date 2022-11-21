@@ -1,1 +1,11 @@
-galeria
+<div class="hero"></div>
+
+<div class="container">
+    <h1>Galería</h1>
+
+    <div *ngIf="foto" class="cards">
+        <div *ngFor="let item of [1,2,3,4]"  [ngStyle]="{'background-image': 'url(' + foto + ')'}">
+            <h2 style="color: white;">Hola</h2>
+        </div>       
+    </div>
+</div>
