@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GooglePhotosService } from 'src/app/core/services/google-photos.service';
-import { GaleriaService } from '../../services/galeria.service';
+import { Album, GaleriaService } from '../../services/galeria.service';
 
 @Component({
   selector: 'app-galeria',
@@ -9,14 +9,14 @@ import { GaleriaService } from '../../services/galeria.service';
 })
 export class GaleriaComponent implements OnInit {
 
-  foto: string = "";
+  Albums:Album[] = []
 
   constructor(
     private GaleriaService:GaleriaService
   ) { }
 
   ngOnInit(): void {
-    this.GaleriaService.getAlbums().then(foto => this.foto =foto)
+    this.GaleriaService.getAlbums().subscribe(Albums => this.Albums = Albums)
   }
 
 }
