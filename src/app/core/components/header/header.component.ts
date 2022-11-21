@@ -38,7 +38,7 @@ export class HeaderComponent implements OnInit {
   menuMobile:boolean = false;
 
   navFixed: boolean = false;
-  scrollOffset: number = 90;
+  scrollOffset: number = 100;
 
 
   constructor() { }
