@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions } from 'ngx-gallery-images-video';
 import { GaleriaService } from '../../services/galeria.service';
@@ -6,7 +6,8 @@ import { GaleriaService } from '../../services/galeria.service';
 @Component({
   selector: 'app-album',
   templateUrl: './album.component.html',
-  styleUrls: ['./album.component.scss']
+  styleUrls: ['./album.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class AlbumComponent implements OnInit {
 

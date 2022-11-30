@@ -38,3 +38,11 @@
     }
 }
 
+@media only screen and (max-width: 900px){
+   .cards{
+    div{
+        flex: initial;
+    }
+   }
+}
+
