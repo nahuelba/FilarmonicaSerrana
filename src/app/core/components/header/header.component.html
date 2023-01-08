@@ -22,7 +22,7 @@
             </div>
         </button>
 
-        <div *ngIf="menuMobile" class="menu-list">
+        <div *ngIf="menuMobile" [@menu] class="menu-list">
             <button class="hamburger hamburger--chop" style="margin-left:60%" [ngClass]="{'active': menuMobile}" (click)="menuMobile=!menuMobile" type="button">
                 <div class="inner">
                     <span class="bar"></span>
