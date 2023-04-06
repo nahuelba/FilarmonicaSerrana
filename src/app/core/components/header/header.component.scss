@@ -8,17 +8,18 @@
 
 .header{
     // background: rgba(0,0,0,.4);
-    background-color: white;
-    height: 90px;
+    background-color: black;
+    height: 80px;
 
     .content{
         display: flex;
         justify-content: space-around;
         margin: 0 60px;
-        height: 90px;
+        height: 80px;
         align-items: center;
         img{
             height: 75px;
+            cursor: pointer;
         }
 
         ul.nav{
@@ -26,6 +27,7 @@
             list-style: none;
             gap: 30px;
             align-items: center;
+            color:white;
 
             li{
                 text-transform: uppercase;
@@ -50,7 +52,9 @@
 }
 
 
-
+button > div > span{
+    background-color: white !important;
+}
 
 
 
@@ -86,6 +90,8 @@
             cursor: pointer;
             padding: 0;
         }
+
+   
     }
 
     .hamburger.active span.bar {
