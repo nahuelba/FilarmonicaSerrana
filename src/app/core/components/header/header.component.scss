@@ -38,7 +38,7 @@
                 font-size: 0.9em;
                 letter-spacing: 1.4px;
                 &:hover{
-                    color: $primary;
+                    color: $primary-header;
                     cursor: pointer;
                 }
                
@@ -48,7 +48,7 @@
 } 
 
 .active{
-    color: $primary;
+    color: $primary-header;
 }
 
 
