@@ -10,6 +10,8 @@ export class FooterComponent implements OnInit {
 
   form:FormGroup = this.fb.group({email: ['', Validators.email]})
 
+  year:number = new Date().getFullYear();
+
   constructor( private fb:FormBuilder) { }
 
   ngOnInit(): void {

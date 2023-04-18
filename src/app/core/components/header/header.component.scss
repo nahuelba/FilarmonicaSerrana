@@ -29,6 +29,13 @@
             align-items: center;
             color:white;
 
+            .div-redes{
+                display: flex;
+                gap: 10px;
+                margin-left: 20px;
+            }
+            
+
             li{
                 text-transform: uppercase;
                 -moz-transition: all .3s ease-in;
@@ -42,6 +49,13 @@
                     cursor: pointer;
                 }
                
+             
+
+                    img.redes{
+                        height: 27px;
+
+                    }
+                
             }
         }
     }
