@@ -13,11 +13,7 @@
             [routerLinkActiveOptions]="{ exact: true }"
             >{{item.name}}</li>
 
-            <div class="div-redes">
-
-                <li  > <a href="https://www.instagram.com/filarmonicaserrana/" target="_blank"> <img class="redes" src="assets/img/icons8-instagram-50.png" alt="instagram"></a></li>
-                <li  ><a href="https://www.facebook.com/p/Filarm%C3%B3nica-serrana-100079328147124/" target="_blank"> <img  class="redes" src="assets/img/icons8-facebook-50.png" alt="facebook"></a></li>
-            </div>
+            <app-redes-sociales></app-redes-sociales>
 
         </ul>
 
@@ -45,6 +41,8 @@
                 [routerLinkActiveOptions]="{ exact: true }"
                 (click)="menuMobile=false;"
                 >{{item.name}}</li>
+
+                <app-redes-sociales></app-redes-sociales>
             </ul>
         </div>
     </div>

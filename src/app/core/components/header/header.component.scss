@@ -29,12 +29,7 @@
             align-items: center;
             color:white;
 
-            .div-redes{
-                display: flex;
-                gap: 10px;
-                margin-left: 20px;
-            }
-            
+      
 
             li{
                 text-transform: uppercase;
@@ -51,10 +46,6 @@
                
              
 
-                    img.redes{
-                        height: 27px;
-
-                    }
                 
             }
         }
@@ -69,6 +60,9 @@
 button > div > span{
     background-color: white !important;
 }
+
+
+
 
 
 
@@ -118,8 +112,12 @@ button > div > span{
 
     }
 
+
+
  
 }
+
+
 @media only screen and (min-width: 900px){
     .hamburger, .menu-list{
         display: none;
@@ -141,6 +139,16 @@ button > div > span{
 
         .active{
             color: white;
+        }
+    }
+
+    .div-redes{
+        display: flex;
+        gap: 10px;
+        margin-left: 20px;
+        img.redes{
+            height: 27px !important;
+        
         }
     }
   
