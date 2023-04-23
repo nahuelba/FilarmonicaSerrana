@@ -4,8 +4,20 @@
     <h1>Galería</h1>
 
     <div class="cards">
-        <div *ngFor="let album of Albums" [routerLink]="'/galeria/' + album.name" [ngStyle]="{'background-image': 'url(' + album.image + ')'}">
-            <!-- <h2 style="color: white;">Hola</h2> -->
-        </div>       
+        <span *ngFor="let Post of Posts">
+
+            <a *ngIf="Post.media_type=='IMAGE'" [href]="Post.permalink" target="_blank" [ngStyle]="{'background-image': 'url(' + Post.media_url + ')'}">
+                <!-- [routerLink]="'/galeria/' + album.name" -->
+            </a>
+
+            <video    
+            *ngIf="Post.media_type=='VIDEO'" 
+
+            [src]="Post.media_url" 
+            type="video/mp4" 
+            controls playsinline>
+                
+            </video>
+        </span>
     </div>
 </div>

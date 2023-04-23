@@ -9,5 +9,6 @@ export const environment = {
     messagingSenderId: '228385124496',
     measurementId: 'G-JE3H5T8T40',
   },
-  production: true
+  production: true,
+  instagramToken:"IGQVJYZA3dhdHlxWG9PT25LZAEF2clB0d09BSXV2eVd4ZAWFUdll0Vk5xN092dk5VX1JMbldteElkQjQzSlJZATDZAxWWxtdlhHVlVsQS1QcTFjTjR5My1HZAlNYaW95cHpWTng0UXhhQnRB"
 };

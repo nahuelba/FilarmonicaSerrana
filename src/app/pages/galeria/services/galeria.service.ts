@@ -1,11 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { getDownloadURL, listAll, ListResult, ref, Storage, StorageReference } from '@angular/fire/storage';
-import { combineLatest, concatMap, from, map } from 'rxjs';
-
-export interface Album {
-  image: string;
-  name: string;
-}
+import { combineLatest, concatMap, from, map, Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { InstagramFeed } from '../interfaces/instagramFeed.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -15,41 +13,12 @@ export class GaleriaService {
 
 
   constructor(
-    private storage: Storage
-
+    private HttpClient:HttpClient
   ) { }
 
-  getAlbums(){
-    return from(listAll(ref(this.storage, 'Fotos/'))).pipe(concatMap((ListResult:ListResult) => {
-      let observables: any[] = [];
-      
-      ListResult.items.forEach((foto:StorageReference) => {
-        observables.push(from(getDownloadURL(ref(this.storage, foto.fullPath))).pipe(
-          map((url:string) => {
-          return {
-            image:url,
-            name: foto.name.slice(0, -4)
-          }          
-        })))
-      })
 
-      console.log(observables);
-      return combineLatest(observables);
-    }))
-  // return getDownloadURL(ref(this.storage, 'Fotos/Embalse.jpg'))
-  }
-
-  getAlbumImages(name: string){
-    return from(listAll(ref(this.storage, 'Fotos/' + name))).pipe(concatMap((ListResult:ListResult) => {
-      let observables: any[] = [];
-      
-      ListResult.items.forEach((foto:StorageReference) => {
-        observables.push(from(getDownloadURL(ref(this.storage, foto.fullPath))).pipe(map((url:string) => url)))
-      })
-
-      console.log(observables);
-      return combineLatest(observables);
-    }))
+  getInstagramFeed(): Observable<InstagramFeed>{
+    return this.HttpClient.get<InstagramFeed>(`https://graph.instagram.com/me/media?fields=media_url,media_type,permalink&access_token=${environment.instagramToken}`)
   }
 
 }
